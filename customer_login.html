@@ -88,32 +88,29 @@
     </form>
   </div>
 
- <script>
-  document.querySelector("form").addEventListener("submit", async (e) => {
-    e.preventDefault();
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwlSKe6yszzY6FTRyKmCHzawoErYY2Vez4y8XDjYE244qQJPg3iViAM2oIyUuC3g394/exec";
 
-    const data = {
-      name: document.querySelector("#name").value,
-      email: document.querySelector("#email").value,
-      phone: document.querySelector("#phone").value,
-      product: document.querySelector("#product").value,
-      message: document.querySelector("#message").value
-    };
+    document.getElementById("contactForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
 
-    await fetch(
-      "https://script.google.com/macros/s/AKfycbwlSKe6yszzY6FTRyKmCHzawoErYY2Vez4y8XDjYE244qQJPg3iViAM2oIyUuC3g394/exec",
-      {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
+      const formData = new FormData(this);
+
+      try {
+        await fetch(scriptURL, {
+          method: "POST",
+          body: formData
+        });
+
+        alert("Form submitted successfully!");
+        this.reset();
+
+      } catch (error) {
+        alert("Error submitting form!");
+        console.error(error);
       }
-    );
-
-    alert("Form submitted successfully!");
-  });
-</script>
-
+    });
+  </script>
 
 </body>
 </html>
