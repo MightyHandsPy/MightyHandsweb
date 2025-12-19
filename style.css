@@ -1,3 +1,15 @@
+
+:root {
+  --navy-blue: #0A1D56;
+}
+
+/* ===== Global Text Color Override ===== */
+body,
+body * {
+  color: var(--navy-blue) !important;
+}
+
+
 @font-face {
   font-family: 'ITC Kabel Bold';
   src: url('fonts/ITCKabelStd-Bold.ttf') format('truetype');
@@ -189,7 +201,7 @@ header {
   text-align: center;
   padding: 20px;
   background: rgba(0, 0, 0, 0.8);
-  color: #aaa;
+  color: #000;
   font-size: 14px;
 }
 /* ===== Logo Styling ===== */
@@ -315,7 +327,7 @@ header {
   width: 100%;
   height: 100%;
   /* Replace with your static multicolor gradient */
-  background: linear-gradient(#1C4A43);
+  background: linear-gradient(#ffffff);
   background-size: cover;
   z-index: -1;
   filter: brightness(0.9);
@@ -1382,7 +1394,7 @@ body.clients-page {
 
 /* ===== Christmas Sale Section ===== */
 .christmas-sale {
-  text-align: left;
+  text-align: center;
   margin-top: 60px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.05);
@@ -1391,7 +1403,7 @@ body.clients-page {
 }
 
 .sale-title {
-  color: #fff;
+  color: #fffff;
   font-size: 2rem;
   margin-bottom: 20px;
   font-weight: 600;
@@ -1656,18 +1668,18 @@ header {
 }
 
 .btn-explore {
-  background: #ff4d4d;     /* Button color */
+  background: #3b1aff;     /* Button color */
   color: #ffffff;          /* Text color */
   width: 70px;            /* You can change */
   margin-top: 0;
   margin-left: 0;
 }
 .btn-explore:hover {
-  background: #cc0000;     /* Hover colour */
+  background: #3b1aff;     /* Hover colour */
 }
 
 .btn-services {
-  background: #5a3aff;     /* Button color */
+  background: #3b1aff;     /* Button color */
   color: #ffffff;          /* Text color */
   width: 180px;
   margin-top: 5px;
@@ -1677,13 +1689,13 @@ header {
 }
 
 .btn-orders {
-  background: #00c27a;     /* Button color */
+  background: #3b1aff;     /* Button color */
   color: #ffffff;          /* Text color */
   width: 70px;
   margin-top: 10px;
 }
 .btn-orders:hover {
-  background: #00995f;     /* Hover colour */
+  background: #3b1aff;     /* Hover colour */
 }
 
 
@@ -1880,5 +1892,113 @@ header {
 
 Code.gs
 appsscript.json
+
+body {
+  background-color: #ffffff;
+}
+
+section,
+header,
+footer {
+  background-color: #ffffff;
+}
+
+
+
+
+
+
+/* FORCE dropdown menu text to white */
+.dropdown-content a {
+  color: #ffffff !important;
+}
+
+/* Dropdown background */
+.dropdown-content {
+  background-color: #0A1D56 !important;
+}
+
+/* Hover state */
+.dropdown-content a:hover {
+  color: #ecba10 !important;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+/* ABSOLUTE FORCE — CONTACT MODAL TEXT */
+body .contact-modal,
+body .contact-modal * {
+  color: #ffffff !important;
+}
+
+
+header {
+  animation: none !important;
+  box-shadow: none !important;
+}
+
+
+header,
+nav,
+.navbar,
+.main-nav {
+  background-color: skyblue !important;
+}
+
+footer,
+.footer,
+#footer,
+.bottom,
+.bottom-section,
+.contact,
+.cta {
+  background-color: #ffffff !important;
+}
+
+
+
+
+
+
+
+.christmas-sale {
+  position: relative !important;
+  overflow: visible !important;
+  background: white !important;
+}
+
+.side-image {
+  position: absolute;
+  top: 50%;
+  width: 300px;
+  transform: translateY(-50%);
+  z-index: 9999;
+  animation: fadeSide 6s infinite;
+}
+
+.side-image.left {
+  left: 100px;
+}
+
+.side-image.right {
+  right: 100px;
+  animation-delay: 3s;
+}
+
+@keyframes fadeSide {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media (max-width: 900px) {
+  .side-image {
+    display: none;
+  }
+}
+
+
 
 
