@@ -14,19 +14,7 @@
 
 
 
-<!-- Music Button -->
-<button id="musicBtn">🔔 Music</button>
-<audio id="bgMusic" loop>
-    <source src="music.mp3" type="audio/mpeg">
-</audio>
 
-<!-- Animated Lights Border -->
-<div id="lightBorder"></div>
-
-<!-- Christmas Tree Footer -->
-<div id="christmasTreeFooter">
-  <img src="tree.png" alt="Christmas Tree">
-</div>
 
   <!-- ===== Animated Background ===== -->
   <div class="animated-bg"></div>
@@ -50,6 +38,8 @@
             <a href="bible-verse-frames.html">Bible Verse Frames</a>
             <a href="cards.html">Cards</a>
             <a href="bags.html">Bags</a>
+             <a href="caps.html">Caps</a>
+            <a href="badges.html">Badges</a>
           </div>
         </li>
         <li><a href="details.html">Details</a></li>
@@ -170,54 +160,7 @@
   });
 </script>
 
-<script>
-/* Sprinkle Snow */
-function createSprinkle() {
-  const flake = document.createElement("div");
-  flake.classList.add("sprinkle");
-  flake.style.left = Math.random() * 100 + "vw";
-  flake.style.animationDuration = (Math.random() * 3 + 3) + "s";
-  document.getElementById("snowSprinkle").appendChild(flake);
-  setTimeout(() => flake.remove(), 6000);
-}
-setInterval(createSprinkle, 120);
 
-/* Background Flakes */
-function createBackFlake() {
-  const flake = document.createElement("div");
-  flake.classList.add("backflake");
-  flake.style.left = Math.random() * 100 + "vw";
-  flake.style.animationDuration = (Math.random() * 7 + 7) + "s";
-  document.getElementById("snowLayerBack").appendChild(flake);
-  setTimeout(() => flake.remove(), 14000);
-}
-setInterval(createBackFlake, 300);
-
-/* Foreground Flakes */
-function createFrontFlake() {
-  const flake = document.createElement("div");
-  flake.classList.add("frontflake");
-  flake.style.left = Math.random() * 100 + "vw";
-  flake.style.animationDuration = (Math.random() * 4 + 4) + "s";
-  document.getElementById("snowLayerFront").appendChild(flake);
-  setTimeout(() => flake.remove(), 10000);
-}
-setInterval(createFrontFlake, 200);
-
-/* MUSIC BUTTON */
-const music = document.getElementById("bgMusic");
-const btn = document.getElementById("musicBtn");
-
-btn.addEventListener("click", () => {
-  if (music.paused) {
-    music.play();
-    btn.innerHTML = "🔕 Mute";
-  } else {
-    music.pause();
-    btn.innerHTML = "🔔 Music";
-  }
-});
-</script>
 
 </body>
 </html>
