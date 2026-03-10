@@ -664,14 +664,14 @@ header {
 
 .services-list li {
   margin: 10px 0;
-  background: rgba(236,186,16,0.2);
+  background: white;
   padding: 10px;
   border-radius: 10px;
   transition: all 0.3s;
 }
 
 .services-list li:hover {
-  background: rgba(236,186,16,0.3);
+  background: white;
   transform: translateY(-2px);
 }
 
